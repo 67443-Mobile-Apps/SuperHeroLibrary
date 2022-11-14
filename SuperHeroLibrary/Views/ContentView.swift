@@ -7,6 +7,7 @@ import SwiftUI
 
 struct ContentView: View {
   
+  @ObservedObject var notificationManager = LocalNotificationManager()
   @Environment(\.managedObjectContext) private var moc
 
   @FetchRequest(sortDescriptors: [])
@@ -29,70 +30,83 @@ struct ContentView: View {
           
         }
       }
-      Button("Add Examples") {
-        // from old 67311 database example
-        let hero1 = Hero(context: moc)
-        hero1.name = "Batman"
-        hero1.power = "None -- just totally awesome"
-        hero1.franchise = Franchise(context: moc)
-        hero1.franchise?.name = "DC"
-        
-        let hero2 = Hero(context: moc)
-        hero2.name = "Aquaman"
-        hero2.power = "Breathes underwater; communicates with marine life"
-        hero2.franchise = Franchise(context: moc)
-        hero2.franchise?.name = "DC"
-        
-        let hero3 = Hero(context: moc)
-        hero3.name = "Wonder Woman"
-        hero3.power = "Enhanced senses and strength"
-        hero3.franchise = Franchise(context: moc)
-        hero3.franchise?.name = "DC"
-        
-        let hero4 = Hero(context: moc)
-        hero4.name = "Spiderman"
-        hero4.power = "Wall-crawling; enhanced agility; spider-sense"
-        hero4.franchise = Franchise(context: moc)
-        hero4.franchise?.name = "Marvel"
-        
-        let hero5 = Hero(context: moc)
-        hero5.name = "Captain America"
-        hero5.power = "Enhanced strength, durability, agility and reflexes"
-        hero5.franchise = Franchise(context: moc)
-        hero5.franchise?.name = "Marvel"
-        
-        let hero6 = Hero(context: moc)
-        hero6.name = "Superman"
-        hero6.power = "Great strength; near-invulnerability; X-ray vision; flight"
-        hero6.franchise = Franchise(context: moc)
-        hero6.franchise?.name = "DC"
-        
-        let hero7 = Hero(context: moc)
-        hero7.name = "Iron Man"
-        hero7.power = "None apart from iron suit, but is extremely intelligent"
-        hero7.franchise = Franchise(context: moc)
-        hero7.franchise?.name = "Marvel"
-        
-        let hero8 = Hero(context: moc)
-        hero8.name = "Thor"
-        hero8.power = "Incredible strength; additional powers from hammer, Mjolnir"
-        hero8.franchise = Franchise(context: moc)
-        hero8.franchise?.name = "Marvel"
-        
-        let hero9 = Hero(context: moc)
-        hero9.name = "Flash"
-        hero9.power = "Extreme speed; accelerated healing; can generate electricity"
-        hero9.franchise = Franchise(context: moc)
-        hero9.franchise?.name = "DC"
-
-        try? moc.save()
+      HStack {
+        Spacer()
+        Button("Add Examples") {
+          createSuperHeroRecords()
+          try? moc.save()
+        }
+        Spacer()
+        Button("Notify Me") {
+          self.notificationManager.sendNotification(title: "Hey, Comic Book Fan!", subtitle: nil, body: "Come back and see new additions to the Super Hero Library", launchIn: 10)
+        }
+        Spacer()
       }
+      
     }
+  }
+  
+  private func createSuperHeroRecords() {
+    // from old 67311 database example
+    let hero1 = Hero(context: moc)
+    hero1.name = "Batman"
+    hero1.power = "None -- just totally awesome"
+    hero1.franchise = Franchise(context: moc)
+    hero1.franchise?.name = "DC"
+    
+    let hero2 = Hero(context: moc)
+    hero2.name = "Aquaman"
+    hero2.power = "Breathes underwater; communicates with marine life"
+    hero2.franchise = Franchise(context: moc)
+    hero2.franchise?.name = "DC"
+    
+    let hero3 = Hero(context: moc)
+    hero3.name = "Wonder Woman"
+    hero3.power = "Enhanced senses and strength"
+    hero3.franchise = Franchise(context: moc)
+    hero3.franchise?.name = "DC"
+    
+    let hero4 = Hero(context: moc)
+    hero4.name = "Spiderman"
+    hero4.power = "Wall-crawling; enhanced agility; spider-sense"
+    hero4.franchise = Franchise(context: moc)
+    hero4.franchise?.name = "Marvel"
+    
+    let hero5 = Hero(context: moc)
+    hero5.name = "Captain America"
+    hero5.power = "Enhanced strength, durability, agility and reflexes"
+    hero5.franchise = Franchise(context: moc)
+    hero5.franchise?.name = "Marvel"
+    
+    let hero6 = Hero(context: moc)
+    hero6.name = "Superman"
+    hero6.power = "Great strength; near-invulnerability; X-ray vision; flight"
+    hero6.franchise = Franchise(context: moc)
+    hero6.franchise?.name = "DC"
+    
+    let hero7 = Hero(context: moc)
+    hero7.name = "Iron Man"
+    hero7.power = "None apart from iron suit, but is extremely intelligent"
+    hero7.franchise = Franchise(context: moc)
+    hero7.franchise?.name = "Marvel"
+    
+    let hero8 = Hero(context: moc)
+    hero8.name = "Thor"
+    hero8.power = "Incredible strength; additional powers from hammer, Mjolnir"
+    hero8.franchise = Franchise(context: moc)
+    hero8.franchise?.name = "Marvel"
+    
+    let hero9 = Hero(context: moc)
+    hero9.name = "Flash"
+    hero9.power = "Extreme speed; accelerated healing; can generate electricity"
+    hero9.franchise = Franchise(context: moc)
+    hero9.franchise?.name = "DC"
+
   }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}

@@ -18,6 +18,7 @@
 		E7D574072921C40D006750C0 /* Franchise+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D574032921C40D006750C0 /* Franchise+CoreDataProperties.swift */; };
 		E7D574082921C40D006750C0 /* Hero+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D574042921C40D006750C0 /* Hero+CoreDataClass.swift */; };
 		E7D5740A2921D131006750C0 /* HeroRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D574092921D131006750C0 /* HeroRowView.swift */; };
+		E7D574112922C03E006750C0 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D574102922C03E006750C0 /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		E7D574032921C40D006750C0 /* Franchise+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Franchise+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E7D574042921C40D006750C0 /* Hero+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Hero+CoreDataClass.swift"; sourceTree = "<group>"; };
 		E7D574092921D131006750C0 /* HeroRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroRowView.swift; sourceTree = "<group>"; };
+		E7D574102922C03E006750C0 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				E7D573F82921C153006750C0 /* CoreData Models */,
 				E7D573FB2921C362006750C0 /* CoreData Controllers */,
 				E7D573F72921C14A006750C0 /* Views */,
+				E7D5740F2922BCD6006750C0 /* Notifications */,
 				E7D573ED2921C0FC006750C0 /* Assets.xcassets */,
 				E7D573EF2921C0FC006750C0 /* Preview Content */,
 			);
@@ -110,6 +113,14 @@
 				E7D573FC2921C376006750C0 /* DataController.swift */,
 			);
 			path = "CoreData Controllers";
+			sourceTree = "<group>";
+		};
+		E7D5740F2922BCD6006750C0 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				E7D574102922C03E006750C0 /* NotificationManager.swift */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +195,7 @@
 			files = (
 				E7D574052921C40D006750C0 /* Hero+CoreDataProperties.swift in Sources */,
 				E7D573EC2921C0FB006750C0 /* ContentView.swift in Sources */,
+				E7D574112922C03E006750C0 /* NotificationManager.swift in Sources */,
 				E7D573FD2921C376006750C0 /* DataController.swift in Sources */,
 				E7D574062921C40D006750C0 /* Franchise+CoreDataClass.swift in Sources */,
 				E7D5740A2921D131006750C0 /* HeroRowView.swift in Sources */,
