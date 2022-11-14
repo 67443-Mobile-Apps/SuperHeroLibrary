@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21279" systemVersion="21G217" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Franchise" representedClassName="Franchise" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="hero" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Hero" inverseName="franchise" inverseEntity="Hero"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Hero" representedClassName="Hero" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="power" optional="YES" attributeType="String"/>
+        <relationship name="franchise" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Franchise" inverseName="hero" inverseEntity="Franchise"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Person" representedClassName="Person" syncable="YES">
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="height" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isMale" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="weight" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="firstName"/>
+                <constraint value="lastName"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+</model>
