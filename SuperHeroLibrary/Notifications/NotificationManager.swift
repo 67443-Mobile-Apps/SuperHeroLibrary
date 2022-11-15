@@ -28,8 +28,18 @@ class LocalNotificationManager: ObservableObject {
     }
     content.body = body
     
+    // A time interval trigger for demo purposes:
     let trigger = UNTimeIntervalNotificationTrigger(timeInterval: launchIn, repeats: false)
+    
+    // A calendar trigger could also work (but a longer demo):
+    // var date = DateComponents()
+    // date.hour = 10
+    // date.minute = 25
+    // let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: false)
+    
+    
     let request = UNNotificationRequest(identifier: "demoNotification", content: content, trigger: trigger)
+    
 
     UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     
