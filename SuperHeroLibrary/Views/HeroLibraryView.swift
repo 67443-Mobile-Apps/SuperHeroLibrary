@@ -5,7 +5,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HeroLibraryView: View {
   
   @Environment(\.managedObjectContext) private var moc
 
@@ -93,6 +93,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HeroLibraryView()
     }
 }

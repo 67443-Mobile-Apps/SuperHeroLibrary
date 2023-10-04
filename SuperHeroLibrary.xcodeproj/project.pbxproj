@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E7D573EA2921C0FB006750C0 /* SuperHeroLibraryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D573E92921C0FB006750C0 /* SuperHeroLibraryApp.swift */; };
-		E7D573EC2921C0FB006750C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D573EB2921C0FB006750C0 /* ContentView.swift */; };
+		E7D573EC2921C0FB006750C0 /* HeroLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D573EB2921C0FB006750C0 /* HeroLibraryView.swift */; };
 		E7D573EE2921C0FC006750C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7D573ED2921C0FC006750C0 /* Assets.xcassets */; };
 		E7D573F12921C0FC006750C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7D573F02921C0FC006750C0 /* Preview Assets.xcassets */; };
 		E7D573FD2921C376006750C0 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D573FC2921C376006750C0 /* DataController.swift */; };
@@ -23,7 +23,7 @@
 /* Begin PBXFileReference section */
 		E7D573E62921C0FB006750C0 /* SuperHeroLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperHeroLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7D573E92921C0FB006750C0 /* SuperHeroLibraryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroLibraryApp.swift; sourceTree = "<group>"; };
-		E7D573EB2921C0FB006750C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E7D573EB2921C0FB006750C0 /* HeroLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroLibraryView.swift; sourceTree = "<group>"; };
 		E7D573ED2921C0FC006750C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7D573F02921C0FC006750C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E7D573FC2921C376006750C0 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 		E7D573F72921C14A006750C0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E7D573EB2921C0FB006750C0 /* ContentView.swift */,
+				E7D573EB2921C0FB006750C0 /* HeroLibraryView.swift */,
 				E7D574092921D131006750C0 /* HeroRowView.swift */,
 			);
 			path = Views;
@@ -183,7 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7D574052921C40D006750C0 /* Hero+CoreDataProperties.swift in Sources */,
-				E7D573EC2921C0FB006750C0 /* ContentView.swift in Sources */,
+				E7D573EC2921C0FB006750C0 /* HeroLibraryView.swift in Sources */,
 				E7D573FD2921C376006750C0 /* DataController.swift in Sources */,
 				E7D574062921C40D006750C0 /* Franchise+CoreDataClass.swift in Sources */,
 				E7D5740A2921D131006750C0 /* HeroRowView.swift in Sources */,
