@@ -11,7 +11,7 @@ struct SuperHeroLibraryApp: App {
 
   var body: some Scene {
     WindowGroup {
-        ContentView()
+        HeroLibraryView()
         .environment(\.managedObjectContext, dataController.container.viewContext)
     }
   }

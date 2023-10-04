@@ -5,7 +5,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HeroLibraryView: View {
   
   @ObservedObject var notificationManager = LocalNotificationManager()
   @Environment(\.managedObjectContext) private var moc
